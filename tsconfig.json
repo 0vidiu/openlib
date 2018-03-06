@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "strict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "removeComments": false,
+  },
+  "types": [
+    "node"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
