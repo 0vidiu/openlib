@@ -20,6 +20,26 @@
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0vidiu/openlib.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/0vidiu/openlib/issues"
+  },
+  "homepage": "https://github.com/0vidiu/openlib#readme",
+  "keywords": [
+    "boilerplate",
+    "open-source",
+    "library",
+    "typescript",
+    "webpack",
+    "tests",
+    "code-coverage"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
