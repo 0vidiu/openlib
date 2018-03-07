@@ -12,10 +12,10 @@
     "test": "cross-env NODE_ENV=test nyc mocha",
     "lint:js": "eslint --max-warnings=0 ./",
     "lint:ts": "tslint -t stylish -c tslint.json -p tsconfig.json -e ./**/*.spec.ts ./src/**/*.ts",
-    "lint": "npm-run-all --parallel lint:*",
+    "lint": "./node_modules/.bin/npm-run-all --parallel lint:*",
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production webpack",
-    "validate": "npm-run-all --parallel lint test build",
+    "validate": "./node_modules/.bin/npm-run-all --parallel lint test build",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
