@@ -3,16 +3,26 @@
     "baseUrl": ".",
     "target": "es5",
     "strict": true,
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "removeComments": false,
+    "lib": [
+      "dom",
+      "es6",
+      "es5"
+    ]
   },
   "types": [
     "node"
   ],
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
-    "node_modules"
-  ]
+    "./node_modules",
+    "./**/*.spec.ts"
+  ],
+  "compileOnSave": false
 }

@@ -29,7 +29,8 @@ Thumbs.db
 
 # Custom #
 ###############
-node_modules/
-dist/
 .nyc_output
+coverage
+dist
+node_modules
 yarn-error.log

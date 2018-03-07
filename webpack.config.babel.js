@@ -95,6 +95,7 @@ const umdConfiguration = Object.assign({}, configuration, {
     library,
     libraryTarget: 'umd',
     libraryExport: 'default',
+    globalObject: 'this',
   },
 });
 
@@ -105,6 +106,7 @@ const umdMinifiedConfiguration = Object.assign({}, configuration, {
     library,
     libraryTarget: 'umd',
     libraryExport: 'default',
+    globalObject: 'this',
   },
 
   optimization: {
