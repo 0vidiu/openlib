@@ -1,14 +1,24 @@
 {
   "name": "openlib",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "A custom boilerplate for creating open source libraries",
   "main": "dist/openlib.js",
   "author": "Ovidiu Barabula <lectii2008@gmail.com> (https://github.com/0vidiu)",
   "license": "MIT",
   "scripts": {
+    "commit": "git-cz",
+    "setup": "",
+    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "test": "cross-env NODE_ENV=test nyc mocha",
+    "lint:js": "eslint --max-warnings=0 ./",
+    "lint:ts": "tslint -t stylish -c tslint.json -p tsconfig.json -e ./**/*.spec.ts ./src/**/*.ts",
+    "lint": "npm-run-all --parallel lint:*",
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack --watch"
+    "validate": "npm-run-all --parallel lint test build",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.40",
