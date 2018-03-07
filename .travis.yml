@@ -8,14 +8,11 @@ notifications:
 node_js:
   - '9'
   - '8'
-  - '6'
-before_script:
-  - npm prune
 script:
   - npm run validate
 after_success:
   - npm run report-coverage
-# There is no need to release this package on in a registry
+# There is no need to release this package to a registry
 # This should be uncommented once you're up and running
 # with your own module, configured with a CI service
 #  - npm run travis-deploy-once "npm run semantic-release"
