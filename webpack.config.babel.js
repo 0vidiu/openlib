@@ -10,13 +10,17 @@ const include = path.resolve(__dirname, './src');
 
 // Distribution
 const dist = path.resolve(__dirname, './dist');
-const library = 'openlib';
+const library = packageJson.name;
 
 // Webpack configuration
 const configuration = {
   mode: process.env.NODE_ENV || 'development',
 
   entry: './src/index.ts',
+
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
 
   module: {
     rules: [
@@ -35,7 +39,7 @@ const configuration = {
       {
         test: /\.tsx?$/,
         use: {
-          loader: 'ts-loader',
+          loader: 'awesome-typescript-loader',
           options: {
             silent: !isDevelopment,
           },

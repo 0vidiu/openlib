@@ -24,6 +24,8 @@
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
+    "no-consecutive-blank-lines": [true, 2],
+    "arrow-parens": [true, "ban-single-arg-parens"],
     "no-empty": true,
     "no-eval": true,
     "no-string-literal": false,
