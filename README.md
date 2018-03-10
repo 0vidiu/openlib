@@ -12,12 +12,11 @@ This package was created to facilitate the first steps in creating a new project
 ## Getting started
 ```sh
 # Create new project
-git clone https://github.com/0vidiu/openlib.git
-mv openlib aswesome-project
-cd awesome-project
+git clone https://github.com/0vidiu/openlib.git ./<dir-name>
+cd <dir-name>
 
 # Set up git for your new project
-rm -r .git
+rm -rf .git
 git init
 git remote add origin git@github.com:<your-username>/<your-repo>.git
 
