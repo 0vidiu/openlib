@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "alwaysStrict": true,
     "baseUrl": ".",
     "target": "es5",
     "strict": true,
@@ -18,11 +19,11 @@
     "node"
   ],
   "include": [
-    "./src/**/*"
+    "src/**/*.ts"
   ],
   "exclude": [
-    "./node_modules",
-    "./**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "node_modules"
   ],
   "compileOnSave": false
 }

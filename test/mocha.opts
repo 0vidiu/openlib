@@ -2,4 +2,5 @@
 --require @babel/register
 --require source-map-support/register
 --recursive
+--watch-extensions ts,js
 ./src/**/*.spec.ts
