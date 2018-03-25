@@ -39,12 +39,21 @@ const configuration = {
 
       {
         test: /\.tsx?$/,
-        use: {
-          loader: 'awesome-typescript-loader',
-          options: {
-            silent: !isDevelopment,
+        use: [
+          {
+            loader: 'webpack-strip-block',
+            options: {
+              start: 'test:start',
+              end: 'test:end',
+            },
           },
-        },
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              silent: !isDevelopment,
+            },
+          },
+        ],
         include,
       },
     ],
