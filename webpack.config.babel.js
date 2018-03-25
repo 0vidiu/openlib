@@ -1,4 +1,5 @@
 import '@babel/register';
+import webpack from 'webpack';
 import path from 'path';
 import packageJson from './package.json';
 
@@ -52,6 +53,15 @@ const configuration = {
   optimization: {
     minimize: false,
   },
+
+  plugins: [
+    new webpack.BannerPlugin({
+      raw: true,
+      entryOnly: true,
+      include: /cli/,
+      banner: '#!/usr/bin/env node \n',
+    }),
+  ],
 };
 
 if (isDevelopment) {
